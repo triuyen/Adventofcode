@@ -3,7 +3,8 @@ Stratégie : Simulation simple avec rem_euclid(100). Pour p2, utilise une formul
 Performance : ✅ O(n) — parfait, aucun problème.
 
 Jour 2 — IDs de Produits Invalides
-Stratégie : Force brute — itère sur chaque nombre de chaque plage et vérifie si c'est un "double" en convertissant en chaîne de caractères.
+Stratégie : 
+Force brute — itère sur chaque nombre de chaque plage et vérifie si c'est un "double" en convertissant en chaîne de caractères.
 Performance : ⚠️ Problème majeur — si les plages contiennent des millions de nombres, on boucle sur chacun. L'allocation de n.to_string() dans une boucle chaude est aussi coûteuse. Une approche mathématique serait O(plages × 10) au lieu de O(total des nombres).
 
 Jour 3 — Sous-séquence Maximale
