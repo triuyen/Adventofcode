@@ -1,5 +1,11 @@
+//P1 : lights are ON/OFF button toggle them (XOR)
+//P2 :  Instead of toggling, buttons increment counters.
+//GOAL : Minimize total persses while satisfying all counter equations exactly
+
+
 use std::collections::{HashMap, HashSet};
 
+// variable whhen to large 
 const INF: usize = usize::MAX / 4;
 
 // ─── Parsing (identique) ──────────────────────────────────────────────────────
@@ -273,6 +279,7 @@ fn min_presses_p2(target: &[u16], buttons_raw: &[Vec<usize>]) -> usize {
     greedy
 }
 
+// FAILED BUG TO RUN ¨P2 
 fn greedy_p2(buttons: &[Vec<usize>], target: &[u16], _n: usize) -> usize {
     let mut rem = target.to_vec();
     let mut total = 0usize;
@@ -281,6 +288,7 @@ fn greedy_p2(buttons: &[Vec<usize>], target: &[u16], _n: usize) -> usize {
         let mut best_btn = None;
         let mut best_k = 0u16;
         let mut best_score = 0usize;
+
         for (j, btn) in buttons.iter().enumerate() {
             if btn.iter().any(|&i| rem[i] == 0) { continue; }
             let k = btn.iter().map(|&i| rem[i]).min().unwrap_or(0);
@@ -290,6 +298,7 @@ fn greedy_p2(buttons: &[Vec<usize>], target: &[u16], _n: usize) -> usize {
                 best_score = score; best_k = k; best_btn = Some(j);
             }
         }
+
         match best_btn {
             None => return INF,
             Some(j) => { for &i in &buttons[j] { rem[i] -= best_k; } total += best_k as usize; }
