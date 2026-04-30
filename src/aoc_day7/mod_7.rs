@@ -1,9 +1,10 @@
 use std::collections::HashSet;
+use std::collections::HashMap;
 
 pub fn run() {
     let input = std::fs::read_to_string("src/aoc_day7/input_day7.txt")
         .expect("Cannot read input_day7.txt");
-    println!("Day 7 p1 = {}", p1(&input));
+    println!("Day 7 p1 = {}", p2(&input));
 }
 
 pub fn p1(input: &str) -> usize {
@@ -64,6 +65,62 @@ pub fn p1(input: &str) -> usize {
 
     total
 }
+
+pub fn p2(input: &str) -> u64{
+    let grid: Vec<Vec<char>> = input
+        .lines()
+        .filter(|l| !l.is_empty())
+        .map(|l| l.chars().collect())
+        .collect();
+
+    let height = grid.len();
+    if height == 0 {
+        return 0;
+    }
+
+    let width = grid.iter().map(|r| r.len()).max().unwrap_or(0);
+
+    // Trouve S - la source unique
+    let mut state: HashMap<usize, u64> = HashMap::new();
+    let mut start_row = 0usize;
+    'find_s: for (r, row) in grid.iter().enumerate() {
+        for (c, &ch) in row.iter().enumerate() {
+            if ch == 'S' {
+                state.insert(c, 1);
+                start_row = r;
+                break 'find_s;
+            }
+        }
+    }
+
+    // Balayage vers le bas. Même logique que p1 mais on suit le NOMBRE de
+    // timelines qui arrivent à chaque colonne, pas juste leur présence.
+    // Splitter touché par n timelines → c-1 reçoit n, c+1 reçoit n.
+    // Convergences = SOMME (pas fusion).
+    for r in (start_row + 1)..height {
+        let row = &grid[r];
+        let mut next: HashMap<usize, u64> = HashMap::with_capacity(state.len() * 2);
+        for (&c, &n) in &state {
+            let cell = row.get(c).copied().unwrap_or('.');
+            if cell == '^' {
+                if c > 0 {
+                    *next.entry(c - 1).or_insert(0) += n;
+                }
+                if c + 1 < width {
+                    *next.entry(c + 1).or_insert(0) += n;
+                }
+            } else {
+                *next.entry(c).or_insert(0) += n;
+            }
+        }
+        state = next;
+    }
+
+    // Total des timelines qui sortent du manifold.
+    state.values().sum()
+}
+
+
 
 #[cfg(test)]
 mod tests {

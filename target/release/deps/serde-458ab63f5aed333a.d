@@ -1,0 +1,14 @@
+C:\Users\Tri Uyen\Desktop\codeadvante\target\release\deps\serde-458ab63f5aed333a.d: C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\Tri\ Uyen\Desktop\codeadvante\target\release\build\serde-a4c189e81b71a4a0\out/private.rs
+
+C:\Users\Tri Uyen\Desktop\codeadvante\target\release\deps\libserde-458ab63f5aed333a.rlib: C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\Tri\ Uyen\Desktop\codeadvante\target\release\build\serde-a4c189e81b71a4a0\out/private.rs
+
+C:\Users\Tri Uyen\Desktop\codeadvante\target\release\deps\libserde-458ab63f5aed333a.rmeta: C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs C:\Users\Tri\ Uyen\Desktop\codeadvante\target\release\build\serde-a4c189e81b71a4a0\out/private.rs
+
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\lib.rs:
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\integer128.rs:
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\mod.rs:
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\de.rs:
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.228\src\private\ser.rs:
+C:\Users\Tri\ Uyen\Desktop\codeadvante\target\release\build\serde-a4c189e81b71a4a0\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\Tri Uyen\\Desktop\\codeadvante\\target\\release\\build\\serde-a4c189e81b71a4a0\\out

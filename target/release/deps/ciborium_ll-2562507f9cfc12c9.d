@@ -1,0 +1,11 @@
+C:\Users\Tri Uyen\Desktop\codeadvante\target\release\deps\ciborium_ll-2562507f9cfc12c9.d: C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\lib.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\dec.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\enc.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\hdr.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\seg.rs
+
+C:\Users\Tri Uyen\Desktop\codeadvante\target\release\deps\libciborium_ll-2562507f9cfc12c9.rlib: C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\lib.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\dec.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\enc.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\hdr.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\seg.rs
+
+C:\Users\Tri Uyen\Desktop\codeadvante\target\release\deps\libciborium_ll-2562507f9cfc12c9.rmeta: C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\lib.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\dec.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\enc.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\hdr.rs C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\seg.rs
+
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\lib.rs:
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\dec.rs:
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\enc.rs:
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\hdr.rs:
+C:\Users\Tri\ Uyen\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\ciborium-ll-0.2.2\src\seg.rs:
