@@ -3,9 +3,10 @@
 use std::io;
 use std::io::BufRead;
 
+// first test 
 pub fn run() {
     let stdin = io::stdin();
-    let mut pos: i64 = 50;
+    let mut pos: i32 = 50;
     let mut count = 0;
 
     for line in stdin.lock().lines() {
@@ -16,7 +17,7 @@ pub fn run() {
         }
 
         let (dir, dist) = line.split_at(1);
-        let dist: i64 = dist.parse().expect("invalid number");
+        let dist: i32 = dist.parse().expect("invalid number");
 
         pos = match dir {
             "L" => (pos - dist).rem_euclid(100),
