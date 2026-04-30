@@ -51,63 +51,33 @@ pub fn p1(input: &str) -> usize {
 
 
 pub fn p2(input: &str) -> u64 {
-    let bytes = input.as_bytes();
+    let mut ranges: Vec<(u64, u64)> = Vec::new();
 
-    // 1. Pré-compter pour pré-allouer
-    let est_lines = bytes.iter().filter(|&&b| b == b'\n').count();
-    let mut ranges: Vec<(u64, u64)> = Vec::with_capacity(est_lines);
-
-    // 2. Parser bytes par bytes, stop à la ligne vide
-    let mut start = 0;
-    for i in 0..=bytes.len() {
-        if i == bytes.len() || bytes[i] == b'\n' {
-            let line = &bytes[start..i];
-            // trim trailing \r si CRLF
-            let line = if line.last() == Some(&b'\r') { &line[..line.len() - 1] } else { line };
-            if line.is_empty() {
-                break;
-            }
-            let dash = line.iter().position(|&b| b == b'-').unwrap();
-            let a = parse_u64(&line[..dash]);
-            let b = parse_u64(&line[dash + 1..]);
-            ranges.push((a, b));
-            start = i + 1;
-        }
+    // Only read ranges, stop at blank line
+    for line in input.lines() {
+        let line = line.trim();
+        if line.is_empty() { break; }
+        let (a, b) = line.split_once('-').unwrap();
+        let a = a.trim().parse::<u64>().unwrap();
+        let b = b.trim().parse::<u64>().unwrap();
+        ranges.push((a, b));
     }
 
-    // 3. Tri
+    // Sort by start
     ranges.sort_unstable_by_key(|&(a, _)| a);
 
-    // 4. Merge + somme en une seule passe, sans Vec auxiliaire
-    let mut total: u64 = 0;
-    let mut cur: Option<(u64, u64)> = None;
+    // Merge overlapping ranges
+    let mut merged: Vec<(u64, u64)> = Vec::new();
     for (a, b) in ranges {
-        match cur {
-            Some((cs, ce)) if a <= ce + 1 => {
-                if b > ce {
-                    total += b - ce;
-                    cur = Some((cs, b));
-                }
-            }
-            _ => {
-                if let Some((cs, ce)) = cur {
-                    // Already added incrementally; nothing more to add here
-                    let _ = (cs, ce);
-                }
-                total += b - a + 1;
-                cur = Some((a, b));
+        if let Some(last) = merged.last_mut() {
+            if a <= last.1 + 1 {
+                last.1 = last.1.max(b);
+                continue;
             }
         }
+        merged.push((a, b));
     }
-    total
-}
 
-#[inline]
-fn parse_u64(bytes: &[u8]) -> u64 {
-    let mut n = 0u64;
-    for &b in bytes {
-        n = n * 10 + (b - b'0') as u64;
-    }
-    n
+    // Sum lengths of all merged ranges
+    merged.iter().map(|(a, b)| b - a + 1).sum()
 }
-

@@ -30,6 +30,10 @@ fn bench_day4(c: &mut Criterion) {
 }
 
 fn bench_day5(c: &mut Criterion) {
+     c.bench_function("old day 5", |b| {
+    b.iter(|| aoc_day5::mod_5_old::run())
+    });
+
     c.bench_function("day 5", |b| {
         b.iter(|| aoc_day5::mod_5::run())
     });
@@ -39,6 +43,11 @@ fn bench_day6(c: &mut Criterion) {
     c.bench_function("day 6", |b| {
         b.iter(|| aoc_day6::mod_6::run())
     });
+
+    c.bench_function("old day 6", |b| {
+        b.iter(|| aoc_day6::mod_6_old::run())
+    });
+
 }
 
 fn bench_day7(c: &mut Criterion) {
@@ -58,7 +67,7 @@ fn bench_day9(c: &mut Criterion) {
         b.iter(|| aoc_day9::mod_9::run())
     });
 
-    c.bench_function("day 9", |b| {
+    c.bench_function("old day 9", |b| {
         b.iter(|| aoc_day9::mod_9_old::run())
     });
 }

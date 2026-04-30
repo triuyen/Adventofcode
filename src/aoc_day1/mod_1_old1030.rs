@@ -1,22 +1,13 @@
 
-
-<<<<<<< HEAD
 use std::io;
 use std::io::BufRead;
 
-// first test 
-pub fn run() {
-    let stdin = io::stdin();
-    let mut pos: i32 = 50;
-    let mut count = 0;
-=======
 pub fn run() {
     // le run principale qui import le fichier input et les fonction en dessous
     let input = std::fs::read_to_string("src/aoc_day1/input_day1.txt")
         .expect("Cannot read input_day1.txt");
     println!("Running Day 1");
     println!("run P1:{}", p1(&input));
->>>>>>> 425e72caf2bb8ef8b87fb11bbfff495b25e1482d
 
 }
 
@@ -36,12 +27,17 @@ pub fn p1(input: &str) -> i32 {
 
         let (dir, dist) = line.split_at(1);
         let dist: i32 = dist.parse().expect("invalid number");
-
+        
         pos = match dir {
-            "L" => (pos - dist).rem_euclid(100),
-            "R" => (pos + dist).rem_euclid(100),
-            _ => panic!("unknown direction: {}", dir),
+            "L" => {
+                let r = (pos - dist) % 100;
+                if r < 0 { r + 100} else {r}
+            }
+            "R" => (pos + dist) % 100,
+            _ => pos,
         };
+
+        
 
         if pos == 0 {
             count += 1;
