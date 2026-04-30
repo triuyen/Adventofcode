@@ -1,5 +1,5 @@
 // call all mods here
-pub mod aoc_day1  { pub mod mod_1; }
+pub mod aoc_day1  { pub mod mod_1;pub mod mod_1_old1030; }
 pub mod aoc_day2  { pub mod mod_2; pub mod mod_2_0103; }
 pub mod aoc_day3  { pub mod mod_3; }
 pub mod aoc_day4  { pub mod mod_4; }
