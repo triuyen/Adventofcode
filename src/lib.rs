@@ -7,6 +7,7 @@ pub mod aoc_day5  { pub mod mod_5; }
 pub mod aoc_day6  { pub mod mod_6; }
 pub mod aoc_day7  { pub mod mod_7; }
 pub mod aoc_day8  { pub mod mod_8; }
-pub mod aoc_day9  { pub mod mod_9; }
-pub mod aoc_day10 { pub mod mod_10; }
+pub mod aoc_day9  { pub mod mod_9; pub mod mod_9_old; }
+pub mod aoc_day11 { pub mod mod_11; }
+pub mod aoc_day10 { pub mod mod_10_old; pub mod mod_10;}
 pub mod aoc_day12 { pub mod mod_12; }

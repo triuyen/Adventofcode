@@ -10,9 +10,11 @@ pub fn run() {
 }
 
 // naive method . Using the same logic as in p1 but counting how many times we pass through 0 during the rotation
-pub fn p1(input: &str) -> i64 {
-    let mut pos: i64 = 50;
-    let mut count: i64 = 0;
+//same logic used in current but with int at 32 bits
+
+pub fn p1(input: &str) -> i32 {
+    let mut pos: i32 = 50;
+    let mut count: i32 = 0;
 
     for line in input.lines() {
         let line = line.trim();
@@ -22,7 +24,7 @@ pub fn p1(input: &str) -> i64 {
         }
 
         let (dir, dist) = line.split_at(1);
-        let dist: i64 = dist.parse().expect("invalid number");
+        let dist: i32 = dist.parse().expect("invalid number");
 
         pos = match dir {
             "L" => (pos - dist).rem_euclid(100),

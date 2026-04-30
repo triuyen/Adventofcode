@@ -1,12 +1,10 @@
-use std::collections::HashSet;
-use std::collections::HashMap;
+use std::collections::{HashMap,HashSet};
 
 pub fn run() {
-    let input = std::fs::read_to_string("src/aoc_day12/input_day12.txt")
-        .expect("Cannot read input_day12.txt");
-    println!("Day 12 p1 = {}", p1(&input));
+    let input = std::fs::read_to_string("src/aoc_day11/input_day11.txt")
+        .expect("Cannot read input_day11.txt");
+    println!("Day 11 p1 = {}", p1(&input));
 }
-
 
 
 fn parse_input(input: &str) -> HashMap<String, Vec<String>> {
