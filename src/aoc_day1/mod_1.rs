@@ -2,7 +2,8 @@ pub fn run() {
     // le run principale qui import le fichier input et les fonction en dessous
     let input = std::fs::read_to_string("src/aoc_day1/input_day1.txt")
         .expect("Cannot read input_day1.txt");
-    println!("{}", p2(&input));
+    println!("Running Day 1");
+    println!("run P2:{}", p2(&input));
 }
 
 pub fn p1(input: &str) -> i64 {

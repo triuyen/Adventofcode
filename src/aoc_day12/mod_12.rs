@@ -1,4 +1,12 @@
+// Advent of Code 2024, Day 12: Packing Presents
+// You are given a set of 2D Shapes (wxh)
+//for each region you must place a specific number if each shape
+// All shape must be placed aligned to the grid (no partial cells)
+//GOAL : count how many regions are feasible (can fit all shapes)
+
+
 use std::collections::HashSet;
+
 
 pub fn run() {
     let input = std::fs::read_to_string("src/aoc_day12/input_day12.txt")
@@ -210,7 +218,13 @@ fn solve_region(region: &Region, shapes: &[Vec<Cells>]) -> bool {
 
 pub fn p1(input: &str) -> usize {
     let (shapes, regions) = parse_input(input);
-    regions.iter().filter(|r| solve_region(r, &shapes)).count()
+    let count = regions.iter()
+        .filter(|r| solve_region(r, &shapes))
+        .count();
+
+    println!("Valid regions: {}", count);
+
+    count
 }
 
 #[cfg(test)]
